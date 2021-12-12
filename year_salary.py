@@ -18,8 +18,18 @@ def set_variables():
     # input
     global salary
     global years
-    salary = float(input("Enter your current yearly salary: $"))
-    years = int(input("Enter your current years of service: "))
+    # error checking
+    try:
+        salary = float(input("Enter your current yearly salary: $"))
+    except Exception:
+        print("Must be a number")
+        main()
+    # error checking
+    try:
+        years = int(input("Enter your current years of service: "))
+    except Exception:
+        print("Must be a number")
+        main()
     print()
 
 
@@ -44,7 +54,7 @@ def not_quite():
 
 
 def main():
-    
+
     set_variables()
 
     global years
@@ -55,16 +65,17 @@ def main():
 
     else:
         not_quite()
-    
+
     # loop
     answer = input("Is there someone else who would like to try? (y/n) ")
     print()
-    
+
     if answer == constants.YES:
         main()
-    
+
     else:
         print('Goodbye.')
+        quit()
 
 
 if __name__ == "__main__":
