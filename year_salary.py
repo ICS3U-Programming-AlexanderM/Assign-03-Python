@@ -23,13 +23,13 @@ def set_variables():
         salary = float(input("Enter your current yearly salary: $"))
     except Exception:
         print("Must be a number")
-        main()
+        return main()
     # error checking
     try:
         years = int(input("Enter your current years of service: "))
     except Exception:
         print("Must be a number")
-        main()
+        return main()
     print()
 
 
