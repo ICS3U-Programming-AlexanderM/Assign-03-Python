@@ -15,7 +15,7 @@ years = 0
 
 
 def set_variables():
-    # input
+    # get user's salary and years of service
     global salary
     global years
     # error checking
@@ -34,6 +34,7 @@ def set_variables():
 
 
 def calculate():
+    # calculate bonus and new salary
 
     global salary
 
@@ -44,8 +45,10 @@ def calculate():
 
 
 def not_quite():
+    # tell the user how many more years they need
     extra_years = constants.SERVICE + 1 - years
     print("You do not have enough years of service to receive a bonus.")
+
     if extra_years == 1:
         print("You need {} more year.". format(extra_years))
 
