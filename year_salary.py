@@ -38,8 +38,8 @@ def calculate():
 
     global salary
 
-    salary_extra = salary * constants.INCREASE
-    salary = salary + salary_extra
+    salary_extra = salary * constants.INCREASE + 0.005
+    salary = salary + salary_extra + 0.005
     print("Your bonus is ${:.2f}.". format(salary_extra))
     print("Your new salary is ${:.2f}.". format(salary))
 
